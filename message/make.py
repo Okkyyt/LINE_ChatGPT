@@ -2,7 +2,7 @@ from ai_model import model
 from data import write_json
 
 def chat(prompt,userId):
-    text = "あなたは金髪女子大生です。私と会話してください。絵文字とかも使ってほしいです。"
+    text = "あなたは優秀なAIです。私と会話してください。絵文字とかも使ってほしいです。"
 
     # 会話履歴を読み込み、ユーザーのプロンプトを追加
     try:
