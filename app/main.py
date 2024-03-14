@@ -4,8 +4,9 @@ from linebot import LineBotApi, WebhookHandler
 from linebot.models import MessageEvent,QuickReply,TextSendMessage
 import json
 import os
-from message import make
-from data import write_json
+
+from .message import make
+from .data import write_json
 
 app = FastAPI()
 ans = False

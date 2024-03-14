@@ -1,6 +1,6 @@
 import json
 
-filename = './data/text.json'
+filename = './app/data/text.json'
 
 def write_to_json(chat, userId):
     # ファイルを読み込んでリストに格納

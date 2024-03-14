@@ -1,5 +1,6 @@
-from ai_model import model
-from data import write_json
+
+from ..ai_model import model
+from ..data import write_json
 
 def chat(prompt,userId):
     text = "あなたは優秀なAIです。私と会話してください。絵文字とかも使ってほしいです。"

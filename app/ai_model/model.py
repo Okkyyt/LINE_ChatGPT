@@ -1,7 +1,13 @@
 from openai import OpenAI
-from data import write_json
+from dotenv import load_dotenv
+import os
 
-client = OpenAI()
+from ..data import write_json
+
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=api_key)
 
 def reply(messages,userId):
     # OpenAIのAPIを呼び出し、与えられたメッセージに対する応答を取得
