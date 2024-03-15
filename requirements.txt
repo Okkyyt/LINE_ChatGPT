@@ -1,5 +1,5 @@
-uvicorn
-openai
-fastapi
-line-bot-sdk
-python-dotenv
+uvicorn==0.27.1
+openai==1.13.3
+fastapi==0.110.0
+line-bot-sdk==3.9.0
+python-dotenv==1.0.1
