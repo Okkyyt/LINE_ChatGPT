@@ -1,0 +1,23 @@
+steps:
+  # ステップ1: Dockerイメージのビルド
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/line-bot-with-openai/my-app', '.']
+
+  # ステップ2: DockerイメージをArtifact Registryにプッシュ
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/line-bot-with-openai/my-app']
+
+  # ステップ3: Cloud Runにサービスをデプロイ
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'my-app'
+      
+      - '--image'
+      - 'gcr.io/line-bot-with-openai/my-app'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
